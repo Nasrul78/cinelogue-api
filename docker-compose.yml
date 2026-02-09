@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: cinelogue-db
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: t4eTt8HgykEKcfPBDwnwWI23tRPPF9QW
+      POSTGRES_DB: cinelogue_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - cinelogue_data:/var/lib/postgresql/data
+
+volumes:
+  cinelogue_data:
