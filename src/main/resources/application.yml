@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  application:
+    name: cinelogue-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cinelogue_db
+    username: dev
+    password: t4eTt8HgykEKcfPBDwnwWI23tRPPF9QW
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
